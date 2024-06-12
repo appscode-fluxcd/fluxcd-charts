@@ -3,17 +3,70 @@ entries:
   flux2:
   - annotations:
       artifacthub.io/changes: |
-        - "feat: enable labeling of deployments"
+        - "[Chore]: Update App Version to upstream 2.2.3"
     apiVersion: v2
-    appVersion: 2.1.1
-    created: "2023-10-24T12:54:49.772041418Z"
+    appVersion: 2.3.0
+    created: "2024-06-12T17:27:03.804811462Z"
     description: A Helm chart for flux2
-    digest: 38b5634ff9932f7f45596d77204a07a602f4a45889d4d51987f38b62a2d44c9c
+    digest: 4438b01f7387df859c55ad404970c6460600fbe6c7577fbaad9a76c1bcd3074c
     name: flux2
     sources:
     - https://github.com/fluxcd-community/helm-charts
     type: application
     urls:
-    - https://github.com/kluster-management/fluxcd-charts/releases/download/flux2-2.10.3/flux2-2.10.3.tgz
-    version: 2.10.3
-generated: "2023-10-24T12:54:49.772056418Z"
+    - https://github.com/fluxcd-fork/fluxcd-charts/releases/download/flux2-2.13.0/flux2-2.13.0.tgz
+    version: 2.13.0
+  flux2-multi-tenancy:
+  - annotations:
+      artifacthub.io/changes: |
+        - "docs: fix grammar"
+    apiVersion: v2
+    created: "2024-06-12T17:27:04.006054074Z"
+    dependencies:
+    - condition: kyverno.enabled
+      name: kyverno
+      repository: https://kyverno.github.io/kyverno
+      version: 2.1.4
+    deprecated: true
+    description: A Helm chart for flux2-multi-tenancy
+    digest: 03d3212ffd1318284dcf70dc9f01af859d91ad12b046dda784de2a56569b19cb
+    name: flux2-multi-tenancy
+    sources:
+    - https://github.com/fluxcd/flux2-multi-tenancy
+    type: application
+    urls:
+    - https://github.com/fluxcd-fork/fluxcd-charts/releases/download/flux2-multi-tenancy-0.0.6/flux2-multi-tenancy-0.0.6.tgz
+    version: 0.0.6
+  flux2-notification:
+  - annotations:
+      artifacthub.io/changes: |
+        - "[Chore]: Update App Version to upstream 2.2.3"
+    apiVersion: v2
+    appVersion: 2.3.0
+    created: "2024-06-12T17:27:04.181806115Z"
+    description: A Helm chart for flux2 alerts and the needed providers and secrets
+    digest: 9c8d917808d814a8789a693bddf341609ccff692bf70d87d347d8c34c4930914
+    name: flux2-notification
+    sources:
+    - https://github.com/fluxcd-community/helm-charts
+    type: application
+    urls:
+    - https://github.com/fluxcd-fork/fluxcd-charts/releases/download/flux2-notification-1.15.0/flux2-notification-1.15.0.tgz
+    version: 1.15.0
+  flux2-sync:
+  - annotations:
+      artifacthub.io/changes: |
+        - "[Chore]: Update App Version to upstream 2.2.3"
+    apiVersion: v2
+    appVersion: 2.3.0
+    created: "2024-06-12T17:27:04.378738069Z"
+    description: A Helm chart for flux2 GitRepository to sync with
+    digest: ae61df640252e4719f1f1953aad87747844b598376f924637baf217feae89529
+    name: flux2-sync
+    sources:
+    - https://github.com/fluxcd-community/helm-charts
+    type: application
+    urls:
+    - https://github.com/fluxcd-fork/fluxcd-charts/releases/download/flux2-sync-1.9.0/flux2-sync-1.9.0.tgz
+    version: 1.9.0
+generated: "2024-06-12T17:27:04.37876533Z"
